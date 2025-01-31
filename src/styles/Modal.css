@@ -1,0 +1,72 @@
+.modal {
+   
+    width: 100rem;
+    height: 60rem;
+    font-family: 'Noto Sans';
+    padding: 1rem;
+    display: flex;
+    background-size: cover; /* Hace que la imagen cubra toda el área del modal */
+   
+    background-repeat: no-repeat;
+    /* Centrado en pantalla */
+    position: fixed; /* Fija el modal en la pantalla */
+    top: 50%; /* Posiciona el modal verticalmente en el centro */
+    left: 50%; /* Posiciona el modal horizontalmente en el centro */
+    transform: translate(-50%, -50%); /* Ajusta la posición para centrar correctamente */
+    z-index: 1000; /* Asegura que el modal se muestre encima de otros elementos */
+    
+    /* Agregar scroll cuando se desborde */
+    overflow-y: auto; /* Agrega scroll vertical si el contenido es más alto que el contenedor */
+    max-height: 100vh; /* Asegura que el modal no sobrepase la altura de la ventana */
+}
+
+.modal-content {
+    padding: 2rem;
+}
+
+.modal-title {
+    font-size: 2.4rem;
+    color: #767575;
+    font-weight: 700;
+}
+
+.modal-text {
+    color: #4a4a4a;
+    line-height: 2.8rem;
+    font-weight: 400;
+    color: #767575;
+}
+
+.modal-header {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-icon {
+    color: #afaea7;
+    width: 4rem;
+    height: 4rem;
+}
+
+.marker-button {
+    background: transparent;
+    border: none;
+}
+
+.button-close {
+    width: 2rem;
+    height: 3rem;
+}
+.atlas-heading-content{
+    color: #0F6E50;
+}
+
+.atlas-heading-content h1{
+    font-size: 15rem;
+}
+.atlas-heading-content h3{
+    font-size: 3rem;
+    font-weight: 500;
+    margin-top: 100px;
+}

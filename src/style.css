@@ -1,0 +1,216 @@
+:root {
+    --color-terracota: #5F2F21;
+    --color-verde-vivo: #298E39;
+    --color-verde-claro: #96C124;
+    --color-oro-terrenal: #AA7513;
+    --color-azul-profundo: #3A7FA5;
+    --color-arena: #EEECC9;
+    --color-amarillo-brillante: #FCC414;
+}
+
+
+/*Estilos globales*/
+
+/*Box Model Config*/
+html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+    
+}
+
+
+h1{
+    font-size: 10rem;
+}
+
+h3{
+    font-size: 5rem;
+}
+
+p{
+    font-size: 2rem;
+    color: var(--color-arena);
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+
+/* Home */
+.home{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url(../src/assets/valle-3d.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top: 0;
+}
+
+.content {
+    position: absolute;
+    background: rgb(0 0 0 / 50%);
+    width: 100%;
+    height: 100%;
+    
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(0 0 0 / 50%);
+
+}
+
+.header .logo{
+    height: 6.9rem;
+    width: 20rem;
+}
+
+.content-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+
+.content-titles h3{
+    margin-top: -9rem;  
+    background: linear-gradient(90deg, #67F0FF 23.42%, #46FF5E 77.88%);
+    background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 4rem;
+    
+
+}
+
+.content-titles{
+    text-align: center;
+}
+
+
+.titulo {
+    
+    color: #FFFFFF ;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 900;
+  
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  
+    opacity: 1;
+    font-weight: 900px;
+}
+
+@media (min-width: 768px) {
+  .titulo{
+    font-size: 140px;
+  }
+
+}
+
+
+
+
+
+.atlas-button-explorar{
+  text-decoration: none;
+   outline: none;
+   text-decoration: none;
+    padding: 1rem 2rem; 
+    border: 3px solid; 
+    border-image-source: linear-gradient(90deg, #2AE3FF 0%, #0CF814 100%); 
+    border-image-slice: 1; /* Asegura que el gradiente cubra todo el borde */
+    border-radius: 4px; 
+    background: none; 
+    color: black; 
+    background-color: transparent; 
+    font-family: 'Noto Sans', sans-serif; /* Familia tipográfica */
+    font-size: 32px; /* Tamaño del texto */
+    font-weight: 500; /* Peso de la fuente */
+    line-height: 38.78px; /* Altura de línea */
+    text-align: center; /* Alineación del texto */
+    text-underline-position: from-font; /* Alineación del subrayado del texto */
+    text-decoration-skip-ink: none; /* Sin omisión de tinta en el subrayado */
+    cursor: pointer; /* Cursor como puntero al pasar el mouse */
+    color: white;
+    /* Alineación del texto dentro del botón */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0; /* Sin espacio entre los elementos internos */
+    opacity: 1; /* Asegura que el botón sea visible */
+    width: 90%;
+}
+
+
+@media (min-width: 768px) {
+  .atlas-button-explorar{
+    width: auto;
+  }
+}
+
+
+.atlas-button-explorar:hover {
+    animation: borderMove 2s linear infinite; /* Animación del borde al hacer hover */
+    border-color: transparent; /* El borde es transparente al hacer hover para dejar ver el gradiente */
+    background-color: linear-gradient(90deg, #2AE3FF 0%, #0CF814 100%); 
+    
+
+}
+
+
+
+.App {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .sidebar-toggle {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: red;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .sidebar-toggle:hover {
+    background-color: #2980b9;
+  }
+  
+  .content {
+    padding: 20px;
+    transition: margin-right 0.3s ease;
+  }
+  
+  .content-shifted {
+    margin-right: 250px; /* El mismo valor que el ancho del sidebar */
+  }
+
+  .content-buttons{
+    display: flex;
+    align-items: center;
+  }
+
+.link{
+  outline: none;
+  box-shadow: none;
+}
