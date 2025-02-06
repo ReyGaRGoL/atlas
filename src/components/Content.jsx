@@ -2,7 +2,8 @@ import PropTypes from "prop-types";
 import { MdHelp } from "react-icons/md";
 import driver from "../utils/driver";
 import MapMarker from "./MapMarker";
-import Modal from "./Modal";
+import ModalLosFrallones from "./ModalLosFrallones";
+import ModalLagoCalima from "./ModalLagoCalima";
 import { useState } from "react";
 import location from "../data/data";
 import { Link } from "react-router-dom";
@@ -63,7 +64,10 @@ const Content = ({ toggleSidebar }) => {
 
       {/* Render del modal dinámico */}
       {isModalActive && (
-        <Modal id="modal" setIsModalActive={setIsModalActive} data={modalData} />
+        <ModalLosFrallones id="modal" setIsModalActive={setIsModalActive} data={modalData} />
+      )}
+      {isModalActive && (
+        <ModalLagoCalima id="modal" setIsModalActive={setIsModalActive} data={modalData} />
       )}
 
       <div className="content-info">
@@ -75,11 +79,9 @@ const Content = ({ toggleSidebar }) => {
 
         <section className="content-buttons">
          
-          <Link to='/capitulo-1' className="link">
+          <Link to='/captitulo-1' className="link">
             <button id="atlas-button-explorar" className="atlas-button-explorar">Explorar</button>
           </Link>
-
-          {/* <a href="/components/camitulo1Html/capitulo.html">Explorar</a> */}
 
           <MdHelp color="#32CD32" size="4rem" onClick={handleHelpButton} />
         </section>
